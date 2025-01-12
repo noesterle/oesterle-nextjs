@@ -15,7 +15,7 @@ export default function Nav() {
                 </Link>
                 <Link
                     className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background hover:text-foreground gap-2 hover:bg-[#bdbbb0] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-                    href="/" //Placeholder until Resume page exists.
+                    href="/resume"
                     target=""
                     rel="noopener noreferrer"
                 >
