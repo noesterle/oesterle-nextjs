@@ -1,16 +1,28 @@
 import Image from "next/image";
-import TopNav from "@/app/ui/topnav"
-import Nav from "@/app/ui/nav"
+import Resume from "@/oesterle-resume/app/ui/Resume";
+import {readFileSync} from 'fs';
+import {load} from 'js-yaml';
+import { Resume as ResumeType } from "@/oesterle-resume/data/types";
+
 
 export default function Home() {
+  var doc: ResumeType = {
+                          resume: {
+                            name:'Nathan Oesterle', jobTitle:'Software Engineer', 
+                            summary:'Please contact Nathan Oesterle about this error.', 
+                            contact:[
+                              {title:'contact@oesterle.io', icon:'', link:'mailto:contact@oesterle.io'},
+                              {title: 'Github://noesterle/resume', icon:'', link:'https://github.com/noesterle/oesterle-resume'}
+                            ], 
+                            skills:[], education: [], employment:[], projects:[]}}
+  try {
+    doc = load(readFileSync('../oesterle-resume/data/resume.yml', 'utf8'));
+    // console.log(doc);
+  } catch (e) {
+    // console.log(e);
+  }
+  // console.log(doc)
   return (
-    <div>
-      {/* <TopNav/> */}
-      <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          TODO: Add Resume Page
-        </main>
-      </div>
-    </div>
+    <Resume resume={doc}></Resume>
   );
 }
