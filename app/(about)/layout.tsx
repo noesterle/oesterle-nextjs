@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="styles/home.css" media="all" />
+        <link rel="stylesheet" href="../styles/home.css" media="all" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
