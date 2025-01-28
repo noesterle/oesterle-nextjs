@@ -1,0 +1,8 @@
+services:
+  oesterle_io:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: oesterle_io:latest
+    ports:
+      - "3000:3000"
