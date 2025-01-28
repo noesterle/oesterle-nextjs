@@ -17,8 +17,10 @@ export default function Home() {
   try {
     doc = load(readFileSync('../oesterle-resume/data/resume.yml', 'utf8')) as ResumeType;
     // console.log(doc);
-  } catch (e) { // eslint-disable-line @typescript-eslint/no-unused-vars
+  } catch (e) {
     // console.log(e);
+    const errorStr: string = ' "Error: '+ (e as string) + '"'
+    doc.resume.summary += errorStr
   }
   // console.log(doc)
   return (
