@@ -5,7 +5,10 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./oesterle-resume/**/*.{js,ts,jsx,tsx,mdx}",
+    "./oesterle-resume/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./oesterle-resume/data/**/*.{js,ts,jsx,tsx,mdx}",
+    "./oesterle-resume/public/**/*.{js,ts,jsx,tsx,mdx}",
+    "./oesterle-resume/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
